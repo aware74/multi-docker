@@ -13,9 +13,9 @@ after_success:
   - docker build -t aware74/multi-nginx ./nginx
   - docker build -t aware74/multi-server ./server
   - docker build -t aware74/multi-worker ./worker
-  # Log into the docker cli
+  # Log into the Docker Hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take those images and push them to docker hub
+  # Take those images and push them to Docker Hub
   - docker push aware74/multi-client
   - docker push aware74/multi-nginx
   - docker push aware74/multi-server
